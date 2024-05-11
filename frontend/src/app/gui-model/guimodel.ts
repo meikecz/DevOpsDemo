@@ -1,9 +1,8 @@
-/* tslint:disable:max-line-length */
 export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": "DevOpsDemo FS2024",
+            "title": "DevOps Meikes Frontend FS2024",
             "formList": [
                 {
                     "id": "OwnUserForm",
@@ -15,50 +14,22 @@ export class GuiModel {
                         }
                     ]
                 },
-                {
-                    "id": "NotImplementedForm",
-                    "title": "Not Implemented",
-                    "url": "/dummyform",
-                    "headerVisible": false,
-                    "footerVisible": false,
-                    "borderStyle": "None",
-                    "formFieldList": [
-                        {
-                            "id": "NotImplemented",
-                            "type": "label",
-                            "name": "NotImplementedMessage",
-                            "width": 2
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
-                {
-                    "id": "NotImplementedFormModal",
-                    "title": "NotImplemented",
-                    "url": "/dummyform",
-                    "formFieldList": [
-                        {
-                            "id": "NotImplemented",
-                            "type": "label",
-                            "name": "NotImplementedMessage",
-                            "width": 2
-                        },
-                        {
-                            "type": "okButton",
-                            "name": "Ok"
-                        }
-                    ]
-                },
+                // ... other forms
                 {
                     "id": "ToDoForm",
                     "title": { default: "ToDo" },
                     "url": "/todo",
                     "formFieldList": [
+                        // ... fields for ToDoForm
+                    ]
+                },
+                {
+                    "id": "NotToDoForm",
+                    "title": { default: "Not ToDo" },
+                    "url": "/nottodo",
+                    "formFieldList": [
                         {
-                            "id":   "title",
+                            "id": "title",
                             "type": "text",
                             "name": { default: "Titel" },
                             "required": true,
@@ -86,7 +57,7 @@ export class GuiModel {
                             "name": "Ok"
                         }
                     ]
-                },
+                }
             ],
             "pageList": [
                 {
@@ -107,33 +78,47 @@ export class GuiModel {
                             "width": 2,
                             "newRow": true,
                         },
+                        {
+                            "type": "button",
+                            "name": { default: "Not ToDo-List" },
+                            "icon": "fa-file-alt",
+                            "color": "pomegranate",
+                            "page": "notToDoPage",
+                            "width": 2
+                        }
                     ]
                 },
                 {
                     "id": "toDoPage",
+                    "elementList": [
+                        // ... elements for toDoPage
+                    ]
+                },
+                {
+                    "id": "notToDoPage",
                     "elementList": [
                         {
                             "type": "backbutton",
                         },
                         {
                             "type": "newButton",
-                            "name": { default: "Neues ToDo"},
-                            "icon": "fa-user",
-                            "color": "green",
+                            "name": { default: "Neues Not ToDo"},
+                            "icon": "fa-ban",
+                            "color": "red",
                             "width": 2,
                             "form" : {
-                                "form" : "ToDoForm"
+                                "form" : "NotToDoForm"
                             }
                         },
                         {
                             "type": "list",
-                            "name": "ToDo",
-                            "icon": "fa-user",
-                            "color": "wet-asphalt",
+                            "name": "Not ToDo",
+                            "icon": "fa-ban",
+                            "color": "pomegranate",
                             "search": true,
-                            "url": "/todo",
+                            "url": "/nottodo",
                             "form": {
-                                "form": "ToDoForm"
+                                "form": "NotToDoForm"
                             }
                         }
                     ]
@@ -141,7 +126,6 @@ export class GuiModel {
             ]
         }
     };
-
 
     get guiModel() {
         return this._guiModel;
