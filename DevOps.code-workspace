@@ -8,6 +8,10 @@
 		},
 		{
 			"path": "backend"
+		},
+		{
+			"name": "UnitTests",
+			"path": "../../../Woche 6/UnitTests"
 		}
 	],
 	"settings": {
