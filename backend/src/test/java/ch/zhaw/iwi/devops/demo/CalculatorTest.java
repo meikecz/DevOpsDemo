@@ -50,4 +50,8 @@ void testAddZero() {
     void testSubtractPositiveNumbers() {
         Assertions.assertEquals(5, calc.subtract(10, 5), "10 - 5 sollte 5 ergeben");
     }
+    @Test
+    void testSubtractResultingInNegative() {
+        Assertions.assertEquals(-15, calc.subtract(5, 20), "5 - 20 sollte -15 ergeben");
+    }
 }
