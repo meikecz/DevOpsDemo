@@ -36,4 +36,8 @@ void testAddZero() {
     void testAddLargeNumbers() {
         Assertions.assertEquals(2147483647, calc.add(1073741823, 1073741824), "Testet die Addition von sehr großen Zahlen");
     }
+    @Test
+    void testAddWithNegativeResult() {
+        Assertions.assertEquals(-5, calc.add(-10, 5), "-10 + 5 sollte -5 ergeben");
+    }
 }
