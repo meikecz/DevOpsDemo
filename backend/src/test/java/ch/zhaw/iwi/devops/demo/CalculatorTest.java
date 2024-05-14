@@ -22,4 +22,9 @@ void testAddPositiveNumbers() {
     Calculator calc = new Calculator();
     Assertions.assertEquals(20, calc.add(10, 10), "10 + 10 sollte 20 ergeben");
 }
+@Test
+void testAddNegativeNumbers() {
+    Calculator calc = new Calculator();
+    Assertions.assertEquals(-20, calc.add(-10, -10), "-10 + -10 sollte -20 ergeben");
+}
 }
