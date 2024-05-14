@@ -32,4 +32,8 @@ void testAddZero() {
     Calculator calc = new Calculator();
     Assertions.assertEquals(10, calc.add(10, 0), "10 + 0 sollte 10 ergeben");
 }
+@Test
+    void testAddLargeNumbers() {
+        Assertions.assertEquals(2147483647, calc.add(1073741823, 1073741824), "Testet die Addition von sehr großen Zahlen");
+    }
 }
