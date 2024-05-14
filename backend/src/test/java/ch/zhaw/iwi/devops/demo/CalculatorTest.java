@@ -12,4 +12,10 @@ int result = calc.add(1, 2); // Correctly calling add on a Calculator instance
         Calculator calc = new Calculator();
         Assertions.assertEquals(5, ((Calculator) calc).add(2, 3), "2 + 3 sollte 5 ergeben");
     }
+    @Test
+    void testSubtract() {
+    Calculator calc = new Calculator();
+    Assertions.assertEquals(1, calc.subtract(3, 2), "3 - 2 sollte 1 ergeben");
+}
+
 }
