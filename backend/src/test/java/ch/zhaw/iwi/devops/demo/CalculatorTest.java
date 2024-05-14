@@ -27,4 +27,9 @@ void testAddNegativeNumbers() {
     Calculator calc = new Calculator();
     Assertions.assertEquals(-20, calc.add(-10, -10), "-10 + -10 sollte -20 ergeben");
 }
+@Test
+void testAddZero() {
+    Calculator calc = new Calculator();
+    Assertions.assertEquals(10, calc.add(10, 0), "10 + 0 sollte 10 ergeben");
+}
 }
