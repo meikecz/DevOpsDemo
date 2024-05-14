@@ -44,4 +44,10 @@ void testAddZero() {
     void testAddWithZero() {
         Assertions.assertEquals(-10, calc.add(-10, 0), "-10 + 0 sollte -10 ergeben");
     }
+    
+
+    @Test
+    void testSubtractPositiveNumbers() {
+        Assertions.assertEquals(5, calc.subtract(10, 5), "10 - 5 sollte 5 ergeben");
+    }
 }
