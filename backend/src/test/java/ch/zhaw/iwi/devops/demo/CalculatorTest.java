@@ -40,4 +40,8 @@ void testAddZero() {
     void testAddWithNegativeResult() {
         Assertions.assertEquals(-5, calc.add(-10, 5), "-10 + 5 sollte -5 ergeben");
     }
+    @Test
+    void testAddWithZero() {
+        Assertions.assertEquals(-10, calc.add(-10, 0), "-10 + 0 sollte -10 ergeben");
+    }
 }
