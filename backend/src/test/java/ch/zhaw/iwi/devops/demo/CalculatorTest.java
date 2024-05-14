@@ -17,5 +17,9 @@ int result = calc.add(1, 2); // Correctly calling add on a Calculator instance
     Calculator calc = new Calculator();
     Assertions.assertEquals(1, calc.subtract(3, 2), "3 - 2 sollte 1 ergeben");
 }
-
+@Test
+void testAddPositiveNumbers() {
+    Calculator calc = new Calculator();
+    Assertions.assertEquals(20, calc.add(10, 10), "10 + 10 sollte 20 ergeben");
+}
 }
