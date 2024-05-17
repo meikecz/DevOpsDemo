@@ -7,7 +7,7 @@ import org.junit.jupiter.api.AfterEach;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-public class GreeterTest {
+ class GreeterTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
@@ -23,7 +23,7 @@ public class GreeterTest {
     }
 
     @Test
-    public void testGreet() {
+     void testGreet() {
         Greeter greeter = new Greeter();
         greeter.greet();
         String expectedOutput = "Hallo, willkommen bei DevOps, Meike!" + System.lineSeparator();
