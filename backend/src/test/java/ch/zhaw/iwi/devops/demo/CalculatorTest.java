@@ -3,7 +3,7 @@ package ch.zhaw.iwi.devops.demo;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
-public class CalculatorTest {
+class CalculatorTest {
 Calculator calc = new Calculator();
 int result = calc.add(1, 2); // Correctly calling add on a Calculator instance
 
