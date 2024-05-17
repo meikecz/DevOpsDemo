@@ -20,8 +20,9 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 @RestController
 public class ToDoController {
+    private Map<Integer, ToDo> todos = new HashMap<>();
 
-    private Map<Integer, ToDo> todos = new HashMap<Integer, ToDo>();
+    //private Map<Integer, ToDo> todos = new HashMap<Integer, ToDo>();
 
     @EventListener(ApplicationReadyEvent.class)
     public void init() {
